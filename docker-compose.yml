@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  postgres-dev:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - "${HOME}/.config/postgres-data/data:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_PASSWORD: password
+    container_name: postgres-database
+    networks:
+      containers:
+        ipv4_address: 172.19.0.10
+
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+    - 8080:8080
+    container_name: postgres-adminer
+    networks:
+      containers:
+        ipv4_address: 172.19.0.5
+
+networks:
+  containers:
+    external:
+      name: containers
