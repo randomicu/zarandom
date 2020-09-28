@@ -1,7 +1,23 @@
 # zarandom
 Slack bot to get a random item from list
 
-## Deployment with Caddy and Docker
+## Install Caddy server on Centos
+
+```
+yum install yum-plugin-copr
+yum copr enable @caddy/caddy
+yum install caddy
+```
+
+Run and enable Caddy:
+
+```
+systemctl start caddy
+systemctl enable caddy
+systemctl status caddy
+```
+
+## Deploy with Caddy and Docker
 
 Run docker container: `docker run --name slack-zarandom --publish 127.0.0.1:8111:8080 --detach pythoninja/zarandom`
 
