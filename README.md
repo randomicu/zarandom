@@ -19,7 +19,7 @@ systemctl status caddy
 
 ## Deploy with Caddy and Docker
 
-Run docker container: `docker run --name slack-zarandom --publish 127.0.0.1:8111:8080 --detach pythoninja/zarandom`
+Run docker container: `docker run --name slack-zarandom --publish 127.0.0.1:8111:8080 --detach ghcr.io/randomicu/zarandom:0.0.1`
 
 Configure Caddy, paste this to `/etc/caddy/Caddyfile`:
 
