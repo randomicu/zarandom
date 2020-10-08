@@ -10,7 +10,7 @@
     </parent>
     <groupId>icu.random.slack</groupId>
     <artifactId>zarandom</artifactId>
-    <version>0.0.1</version>
+    <version>unspecified</version>
     <name>zarandom-slack-bot</name>
     <description>Slack bot to get a random item from slash command</description>
 
@@ -70,9 +70,6 @@
                     <layers>
                         <enabled>true</enabled>
                     </layers>
-                    <image>
-                        <name>ghcr.io/randomicu/${project.artifactId}:${project.version}</name>
-                    </image>
                 </configuration>
             </plugin>
         </plugins>
