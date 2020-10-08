@@ -31,7 +31,12 @@ zarandom.slack-apps.random.icu {
     file_server
     
     # Proxy /api/ endpoint to java app
-    reverse_proxy /api/* localhost:8111
+    # reverse_proxy /api/* localhost:8111
+
+    route /api/* {
+        uri strip_prefix /api
+        reverse_proxy localhost:8111
+    }
 
     # Logging
     log {
