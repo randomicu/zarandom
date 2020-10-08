@@ -32,9 +32,9 @@ jobs:
       run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10} | sed -e 's/^v//')
       
     - name: Build with Maven
-      run: mvn -B spring-boot:build-image -Dspring-boot.build-image.imageName=$REPOSITORY/$PROJECT:${{ steps.vars.outputs.tag }}
+      run: mvn -B spring-boot:build-image -Dspring-boot.build-image.imageName=${{ env.REPOSITORY }}/${{ env.PROJECT}}:${{ steps.vars.outputs.tag }}
     
-    - name: Add tag latest to version ${{ steps.vars.outputs.tag }}
-      run: docker tag $REPOSITORY/$PROJECT:${{ steps.vars.outputs.tag }} $REPOSITORY/$PROJECT:latest
+    - name: Add 'latest' tag to image
+      run: docker tag ${{ env.REPOSITORY }}/${{ env.PROJECT}}:${{ steps.vars.outputs.tag }} ${{ env.REPOSITORY }}/${{ env.PROJECT}}:latest
     - name: Push docker images
-      run: docker push $REPOSITORY/$PROJECT:${{ steps.vars.outputs.tag }}
+      run: docker push ${{ env.REPOSITORY }}/${{ env.PROJECT}}:${{ steps.vars.outputs.tag }}
