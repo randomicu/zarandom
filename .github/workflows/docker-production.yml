@@ -44,18 +44,7 @@ jobs:
       run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10} | sed -e 's/^v//')
       
     - name: Build with Maven
-      run: mvn -B spring-boot:build-image --file pom.xml -Dspring-boot.build-image.imageName=ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }}
+      run: mvn -B spring-boot:build-image -Dspring-boot.build-image.imageName=ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }}
       
     - name: Build and push Docker images
-      id: docker_build
-      uses: docker/build-push-action@v2
-      with:
-        push: true
-        tags: |
-          ghcr.io/randomicu/zarandom:latest
-          ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }}
-        cache-from: type=local,src=/tmp/.buildx-cache
-        cache-to: type=local,dest=/tmp/.buildx-cache
-
-    - name: Image digest
-      run: echo ${{ steps.docker_build.outputs.digest }}
+      run: docker push ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }}
