@@ -1,4 +1,4 @@
-package pw.stas.projects.zarandom.controller;
+package icu.random.slack.zarandom.controller;
 
 import com.github.seratch.jslack.app_backend.slash_commands.payload.SlashCommandPayload;
 import com.github.seratch.jslack.app_backend.slash_commands.payload.SlashCommandPayloadParser;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pw.stas.projects.zarandom.service.SlackService;
-import pw.stas.projects.zarandom.service.WinnerService;
+import icu.random.slack.zarandom.service.SlackService;
+import icu.random.slack.zarandom.service.WinnerService;
 
 @RestController
-@RequestMapping("/api/slack")
+@RequestMapping("/slack")
 public class ZaRandomController {
 
   private final WinnerService winnerService;

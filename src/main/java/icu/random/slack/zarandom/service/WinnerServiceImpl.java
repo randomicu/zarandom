@@ -1,4 +1,4 @@
-package pw.stas.projects.zarandom.service;
+package icu.random.slack.zarandom.service;
 
 import java.util.Arrays;
 import java.util.Collections;

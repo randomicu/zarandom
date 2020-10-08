@@ -1,4 +1,4 @@
-package pw.stas.projects.zarandom.service;
+package icu.random.slack.zarandom.service;
 
 import com.github.seratch.jslack.api.model.block.LayoutBlock;
 import com.github.seratch.jslack.api.model.block.SectionBlock;

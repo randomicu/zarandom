@@ -8,14 +8,14 @@
         <version>2.3.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>pw.stas.projects</groupId>
-    <artifactId>lunch-person</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>icu.random.slack</groupId>
+    <artifactId>zarandom</artifactId>
+    <version>0.0.1</version>
     <name>zarandom-slack-bot</name>
     <description>Slack bot to get a random item from slash command</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>14</java.version>
     </properties>
 
     <dependencies>
@@ -64,41 +64,16 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>2.5.2</version>
-                <configuration>
-                    <to>
-                        <image>docker.io/pythoninja/zarandom</image>
-                        <tags>
-                            <tag>latest</tag>
-                        </tags>
-                    </to>
-                    <container>
-                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
-                        <jvmFlags>
-                            <jvmFlag>-server</jvmFlag>
-                            <jvmFlag>-XX:+UseContainerSupport</jvmFlag>
-                            <jvmFlag>-Xmx300m</jvmFlag>
-                            <jvmFlag>-Xss512k</jvmFlag>
-                            <jvmFlag>-XX:CICompilerCount=2</jvmFlag>
-                            <jvmFlag>-Dfile.encoding=UTF-8</jvmFlag>
-                        </jvmFlags>
-                        <args>
-                            <arg>$JAVA_OPTS</arg>
-                            <arg>-server</arg>
-                            <arg>-XX:+UseContainerSupport</arg>
-                            <arg>-Xmx300m</arg>
-                            <arg>-Xss512k</arg>
-                            <arg>-XX:CICompilerCount=2</arg>
-                            <arg>-Dfile.encoding=UTF-8</arg>
-                        </args>
-                    </container>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
+                    <image>
+                        <name>ghcr.io/randomicu/${project.artifactId}:${project.version}</name>
+                    </image>
+                </configuration>
             </plugin>
         </plugins>
     </build>

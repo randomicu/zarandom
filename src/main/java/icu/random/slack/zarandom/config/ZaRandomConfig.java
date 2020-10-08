@@ -1,4 +1,4 @@
-package pw.stas.projects.zarandom.config;
+package icu.random.slack.zarandom.config;
 
 import com.github.seratch.jslack.app_backend.slash_commands.payload.SlashCommandPayloadParser;
 import org.springframework.context.annotation.Bean;

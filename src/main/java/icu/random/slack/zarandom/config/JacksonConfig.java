@@ -1,4 +1,4 @@
-package pw.stas.projects.zarandom.config;
+package icu.random.slack.zarandom.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

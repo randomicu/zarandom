@@ -1,4 +1,4 @@
-package pw.stas.projects.zarandom.service;
+package icu.random.slack.zarandom.service;
 
 import com.github.seratch.jslack.app_backend.slash_commands.response.SlashCommandResponse;
 
