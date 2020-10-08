@@ -45,6 +45,8 @@ jobs:
       
     - name: Build with Maven
       run: mvn -B spring-boot:build-image -Dspring-boot.build-image.imageName=ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }}
-      
-    - name: Build and push Docker images
+    
+    - name: Add tag latest to version ${{ steps.vars.outputs.tag }}
+      run: docker tag ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }} ghcr.io/randomicu/zarandom:latest
+    - name: Push docker images
       run: docker push ghcr.io/randomicu/zarandom:${{ steps.vars.outputs.tag }}
