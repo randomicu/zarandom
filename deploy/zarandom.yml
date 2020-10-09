@@ -1,0 +1,22 @@
+---
+- hosts: production
+  remote_user: deployer
+  gather_facts: no
+  become: yes
+
+  vars:
+    zarandom_version: "0.0.1"
+
+  tasks:
+  - name: Stop zarandom container
+    docker_container:
+      name: slack-zarandom
+      state: absent
+  
+  - name: Run zarandom container
+    docker_container:
+      name: slack-zarandom
+      image: ghcr.io/randomicu/zarandom:{{ zarandom_version }}
+      state: started
+      ports:
+        - "127.0.0.1:8111:8080"

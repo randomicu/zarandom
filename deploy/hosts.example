@@ -1,0 +1,6 @@
+[production]
+hostname ansible_host=127.0.0.1
+
+
+[production:vars]
+ansible_user=username
