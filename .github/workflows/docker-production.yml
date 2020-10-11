@@ -38,5 +38,5 @@ jobs:
       run: docker tag ${{ env.REGISTRY }}/${{ env.PROJECT}}:${{ steps.vars.outputs.tag }} ${{ env.REGISTRY }}/${{ env.PROJECT}}:latest
     - name: Push docker images
       run: |
-        docker push ${{ env.REGISTRY }}/${{ env.PROJECT}}:${{ steps.vars.outputs.tag }}
         docker push ${{ env.REGISTRY }}/${{ env.PROJECT}}:latest
+        docker push ${{ env.REGISTRY }}/${{ env.PROJECT}}:${{ steps.vars.outputs.tag }}
