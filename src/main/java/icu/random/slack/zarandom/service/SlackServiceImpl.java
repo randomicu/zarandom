@@ -1,9 +1,9 @@
 package icu.random.slack.zarandom.service;
 
-import com.github.seratch.jslack.api.model.block.LayoutBlock;
-import com.github.seratch.jslack.api.model.block.SectionBlock;
-import com.github.seratch.jslack.api.model.block.composition.PlainTextObject;
-import com.github.seratch.jslack.app_backend.slash_commands.response.SlashCommandResponse;
+import com.slack.api.model.block.LayoutBlock;
+import com.slack.api.model.block.SectionBlock;
+import com.slack.api.model.block.composition.PlainTextObject;
+import com.slack.api.app_backend.slash_commands.response.SlashCommandResponse;
 import java.util.List;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;

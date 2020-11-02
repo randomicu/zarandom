@@ -1,6 +1,6 @@
 package icu.random.slack.zarandom.config;
 
-import com.github.seratch.jslack.app_backend.slash_commands.payload.SlashCommandPayloadParser;
+import com.slack.api.app_backend.slash_commands.SlashCommandPayloadParser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
