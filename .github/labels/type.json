@@ -1,0 +1,7 @@
+[
+  { "name": "Type: Bug", "color": "#e11d21" },
+  { "name": "Type: Feature", "color": "#8ced3d" },
+  { "name": "Type: Refactoring", "color": "#e5a777" },
+  { "name": "Type: Dependency", "color": "#0366d6" },
+  { "name": "Type: Documentation", "color": "#cfd3d7" }
+]

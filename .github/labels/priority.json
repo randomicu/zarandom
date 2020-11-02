@@ -1,0 +1,5 @@
+[
+  { "name": "Priority: Low", "color": "#ffcdc1" },
+  { "name": "Priority: Medium", "color": "#fbca04" },
+  { "name": "Priority: High", "color": "#eb6420" }
+]
