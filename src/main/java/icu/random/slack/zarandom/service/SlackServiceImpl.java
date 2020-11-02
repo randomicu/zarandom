@@ -5,7 +5,7 @@ import com.github.seratch.jslack.api.model.block.SectionBlock;
 import com.github.seratch.jslack.api.model.block.composition.PlainTextObject;
 import com.github.seratch.jslack.app_backend.slash_commands.response.SlashCommandResponse;
 import java.util.List;
-import javax.annotation.Nullable;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

@@ -10,12 +10,12 @@
     </parent>
     <groupId>icu.random.slack</groupId>
     <artifactId>zarandom</artifactId>
-    <version>unspecified</version>
+    <version>0.0.0</version>
     <name>zarandom-slack-bot</name>
     <description>Slack bot to get a random item from slash command</description>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>15</java.version>
     </properties>
 
     <dependencies>
@@ -38,11 +38,6 @@
             <groupId>com.github.seratch</groupId>
             <artifactId>jslack-lightning</artifactId>
             <version>3.4.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
-            <version>3.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
