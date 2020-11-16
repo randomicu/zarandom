@@ -2,11 +2,13 @@ package icu.random.slack.zarandom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.map.repository.config.EnableMapRepositories;
 
 @SpringBootApplication
-public class ZaRandomSlackBot {
+@EnableMapRepositories
+public class ZarandomSlackBot {
 
   public static void main(String[] args) {
-    SpringApplication.run(ZaRandomSlackBot.class, args);
+    SpringApplication.run(ZarandomSlackBot.class, args);
   }
 }
