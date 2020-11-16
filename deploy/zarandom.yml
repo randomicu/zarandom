@@ -5,7 +5,7 @@
   become: yes
 
   vars:
-    zarandom_version: "0.0.1"
+    zarandom_version: "0.0.2"
 
   tasks:
   - name: Stop zarandom container
