@@ -42,7 +42,7 @@
         <dependency>
             <groupId>com.slack.api</groupId>
             <artifactId>slack-api-model</artifactId>
-            <version>1.5.2</version>
+            <version>1.5.3</version>
         </dependency>
         <dependency>
             <groupId>com.slack.api</groupId>
